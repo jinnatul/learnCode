@@ -8,6 +8,9 @@ print (2 != "2") # True
 
 print ('hi' == 'Morol') # False
 
+print ('x' in [1, 2, 3]) # False
+
+print ('x' in [1, 2, 3, 'x']) # True
 
 # If Else
 if 3 > 4:
