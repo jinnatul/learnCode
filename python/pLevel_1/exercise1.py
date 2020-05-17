@@ -28,7 +28,7 @@ myDec2 = {'key': {'key1': 'Morol'}}
 print (myDec2['key']['key1']) # Morol
 
 myDec3 = {'key': [{'key1': ['This is ', ['Morol']]}]}
-print (myDec3['key'][0]['key1'][1]) # ['Morol']
+print (myDec3['key'][0]['key1'][1][0]) # Morol
 
 
 ## Probolem - 4

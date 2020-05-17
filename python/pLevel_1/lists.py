@@ -73,3 +73,11 @@ print (matrix) # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 first_column = [row[0] for row in matrix]
 print (first_column) # [1, 4, 7]
+
+# Define list range
+myList = list(range(5))
+print (myList) # [0, 1, 2, 3, 4]
+
+# Even numbers 0 to 10
+myList = list(range(0,11, 2))
+print (myList) # [0, 2, 4, 6, 8, 10]
