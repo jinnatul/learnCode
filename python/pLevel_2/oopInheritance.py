@@ -16,12 +16,12 @@ class Dog(Animal):
 myDog = Dog()
 myDog.eat()
 
-## Before overrite eat method
+## Before overwrite eat method
 # Animal created
 # Doc create
 # Eating
 
-## After overrite eat method
+## After overwrite eat method
 # Animal created
 # Doc create
 # Dog Eating
