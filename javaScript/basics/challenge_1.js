@@ -1,4 +1,4 @@
-/* BMI calculate */
+/* challenge_1 BMI calculate */
 let massMorol = 72 // kg
 let heightMorol = 1.80 // meters
 
