@@ -1,0 +1,17 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+}
+
+#navClass {
+    background-color: rgb(33, 138, 174)
+}
+
+.navid {
+    width: 45%;
+    margin: 5px 5px;
+}
+
+.customContainer {
+    margin: 2rem 7rem;
+}
