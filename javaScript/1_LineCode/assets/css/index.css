@@ -15,3 +15,26 @@ body {
 .customContainer {
     margin: 2rem 7rem;
 }
+
+.codejs{
+    overflow-x:auto;
+    padding:.5em;
+    background:#282a36;
+    color:#f8f8f2;
+}
+
+.codejs-keyword {
+    color:#8be9fd
+}
+
+.codejs-function{
+    color:#ff79c6
+}
+
+.codejs-value{
+    color:#0099ff
+}
+
+.codejs-comment {
+    color:#6272a4
+}

@@ -5,7 +5,7 @@ $(function() {
     // Check if all array elements are equal to a given value
     + "<li><div class='collapsible-header blue lighten-2'>"
     + "<h6>Check if all array elements are equal to a given value</h6></div>"
-    + "<div class='collapsible-body'>"+ fun() +"</div></li>"
+    + "<div class='collapsible-body codejs'>"+ allArrayElementsEqual() +"</div></li>"
 
     // Check if all items in an array are equal
     + "<li><div class='collapsible-header blue lighten-2'>"
@@ -181,14 +181,14 @@ $(function() {
 
 })
 
-function fun() {
-    $.get('./assets/test.md', function() {})
-        .done(function(res) {
-            console.log(res)
-            return res
-        })
-        .fail(function () {
-            return "Fail"
-        })
-    
+function allArrayElementsEqual() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isEqual = (arr, value) => arr.every(item => item === value);<br><br>"
+    + "Or <br><br>// Ends earlier for false arrays<br>"
+    + "<span class='codejs-keyword'>let </span> isEqual = (arr, value) =>"
+    + "!arr.some(item => item !== value);<br><br>// Examples<br>"
+    + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>foo</span>'], '<span class='codejs-value'>foo</span>');     // true<br>"
+    + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>bar</span>'], '<span class='codejs-value'>foo</span>');     // false<br>"
+    + "isEqual(['<span class='codejs-value'>bar</span>', '<span class='codejs-value'>bar</span>'], '<span class='codejs-value'>foo</span>');     // false</code>"
+    return code
 }
