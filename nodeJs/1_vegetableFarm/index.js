@@ -3,6 +3,8 @@ const http = require('http');
 const url = require('url');
 const replaceTemplate = require('./modules/replaceTemplate')
 
+const port = process.env.PORT || 8000;
+
 // server create
 const overviewHTML = fs.readFileSync(`${__dirname}/templates/overview.html`, 'utf-8')
 const productHTML = fs.readFileSync(`${__dirname}/templates/product.html`, 'utf-8')
@@ -42,6 +44,6 @@ const server = http.createServer((req, res) => {
     
 })
 
-server.listen(8000, '127.0.0.1', () => {
-    console.log('Server run on 8000 number port')
+server.listen(port, () => {
+    console.log(`Server run on port: ${port}`)
 })
