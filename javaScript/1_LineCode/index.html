@@ -7,6 +7,11 @@
         <title>1 Line code</title>
         
         <!--CSS section-->
+        <style>
+            main{
+                display:none
+            }
+        </style>
         <link rel="stylesheet" href="assets/lib/materialize/css/materialize.min.css">
         <link rel="stylesheet" href="assets/lib/materialize/css/icon.css">
         <link rel="stylesheet" href="assets/css/index.css">
@@ -29,33 +34,83 @@
                             </form>
                         </div>
                         <ul class="right">
-                            <li><a class="" href="#home">Home</a></li>
-                            <li><a class="" href="#bangladesh">Date-Time</a></li>
-                            <li><a class="" href="#district">DOM</a></li>
-                            <li><a class="" href="#charts">Function</a></li>
-                            <li><a class="" href="#dhaka">MISC</a></li>
-                            <li><a class="" href="#hotLine">Number</a></li>
-                            <li><a class="" href="#faq">Object</a></li>
-                            <li><a class="" href="#global">String</a></li>
+                            <li><a class="scroll" href="#home">Home</a></li>
+                            <li><a class="scroll" href="#datetime">Date-Time</a></li>
+                            <li><a class="scroll" href="#dom">DOM</a></li>
+                            <li><a class="scroll" href="#function">Function</a></li>
+                            <li><a class="scroll" href="#misc">MISC</a></li>
+                            <li><a class="scroll" href="#number">Number</a></li>
+                            <li><a class="scroll" href="#object">Object</a></li>
+                            <li><a class="scroll" href="#string">String</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
-        </header>
 
-        <section>
-            <div class="customContainer">
-                <h4 class="center-align headerText">Array</h4>
-                <div class="row">
-                    <div id="pro_array"></div>
+            <!--preloader component-->
+            <div class="mainLoader">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </header>
 
+
+        <main>
+            <!--Scrolling button-->
+            <div class="fixed-action-btn">
+                <a
+                class="btn-floating btn-medium blue-grey darken-4 tooltipped"
+                data-position="left"
+                data-tooltip="Top"
+                id="scrollTop"
+                onclick="toTop()"
+                >
+                <i class="large material-icons">arrow_upward</i>
+                </a>
+            </div>
+        
+            <!--Array section-->
+            <section id="home">
+                <div class="customContainer">
+                    <h4 class="center-align headerText">Array</h4>
+                    <div class="row">
+                        <div id="pro_array"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
         <!--Script section-->
         <script src="assets/lib/jquery/jquery.min.js"></script>
         <script src="assets/lib/materialize/js/materialize.min.js"></script>
         <script src="assets/js/index.js"></script>
         <script src="assets/js/array.js"></script>
+        <script>
+            window.onscroll = scroll1;
+            function scroll1() {
+              var toTop = document.getElementById("scrollTop");
+              window.scrollY > 500
+                ? (toTop.style.display = "Block")
+                : (toTop.style.display = "none");
+            }
+      
+            function toTop() {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }
+        </script>
     </body>
 </html>
