@@ -1,4 +1,6 @@
 $(function() {
+
+    // preloader
     $("main").hide();
     setTimeout(function() {
         $('.mainLoader').fadeOut();
@@ -7,12 +9,9 @@ $(function() {
     
 
     // collapsible
-    $(document).ready(function(){
-        let elem = document.querySelector('.collapsible.expandable');
-        M.Collapsible.init(elem, {
-          accordion: false
-        });
-    });
+    $(document).ready(function() {
+        $('.collapsible').collapsible();
+    })
 
     // Smooth scrolling
     var scrollLink = $(".scroll");

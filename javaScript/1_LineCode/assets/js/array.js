@@ -1,6 +1,6 @@
 $(function() {
 
-    let arrayProblems = "<ul class='collapsible expandable'>"
+    let problems = "<ul class='collapsible expandable'>"
 
     // Check if all array elements are equal to a given value
     + "<li><div class='collapsible-header blue lighten-2'>"
@@ -177,7 +177,7 @@ $(function() {
     + "<h6>Zip multiple arrays</h6></div>"
     + "<div class='collapsible-body codejs'></div></li>"
 
-    $('#pro_array').html(arrayProblems);
+    $('#pro_array').html(problems);
 
 })
 
