@@ -39,12 +39,7 @@ $(function() {
 
     // Delay the evaluation of a function
     + "<li><div class='collapsible-header'>"
-    + "<h6>--> </h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
-
-    // Delay the evaluation of a function
-    + "<li><div class='collapsible-header'>"
-    + "<h6>--> </h6></div>"
+    + "<h6>--> Delay the evaluation of a function</h6></div>"
     + "<div class='collapsible-body codejs'></div></li>"
 
     // Execute a function once
