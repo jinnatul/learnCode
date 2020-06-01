@@ -39,17 +39,13 @@ body {
 }
 
 .codejs-keyword {
-    color:#8be9fd
+    color:#e6ff05
 }
 
 .codejs-function{
-    color:#ff79c6
+    color:#01e1ff
 }
 
 .codejs-value{
-    color:#0099ff
-}
-
-.codejs-comment {
-    color:#6272a4
+    color:#2d01cc
 }

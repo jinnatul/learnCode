@@ -183,13 +183,16 @@ $(function() {
 
 function allArrayElementsEqual() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
-    + "isEqual = (arr, value) => arr.every(item => item === value);<br><br>"
+    + "isEqual = <span class='codejs-function'>(arr, value)</span> => arr.every(item => item === value);<br><br>"
     + "Or <br><br>// Ends earlier for false arrays<br>"
-    + "<span class='codejs-keyword'>let </span> isEqual = (arr, value) =>"
+    + "<span class='codejs-keyword'>let </span> isEqual = <span class='codejs-function'>(arr, value)</span> =>"
     + "!arr.some(item => item !== value);<br><br>// Examples<br>"
-    + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>foo</span>'], '<span class='codejs-value'>foo</span>');     // true<br>"
-    + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>bar</span>'], '<span class='codejs-value'>foo</span>');     // false<br>"
-    + "isEqual(['<span class='codejs-value'>bar</span>', '<span class='codejs-value'>bar</span>'], '<span class='codejs-value'>foo</span>');     // false</code>"
+    + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>foo</span>'],"
+    + "'<span class='codejs-value'>foo</span>');     // true<br>"
+    + "isEqual(['<span class='codejs-value'>foo</span>', '<span class='codejs-value'>bar</span>'],"
+    + "'<span class='codejs-value'>foo</span>');     // false<br>"
+    + "isEqual(['<span class='codejs-value'>bar</span>', '<span class='codejs-value'>bar</span>']," 
+    + "'<span class='codejs-value'>foo</span>');     // false</code>"
     return code
 }
 
