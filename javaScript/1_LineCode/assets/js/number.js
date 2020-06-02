@@ -10,7 +10,7 @@ $(function() {
     // Calculate fibonacci numbers
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate fibonacci numbers</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ calculateFibonacciNumbers() +"</div></li>"
 
     // Calculate the average of arguments
     + "<li><div class='collapsible-header'>"
@@ -159,5 +159,18 @@ function anOrdinalSuffixTo_A_Number() {
     + "<span class='codejs-function'>addOrdinal</span>(10);      // '10th'<br>"
     + "<span class='codejs-function'>addOrdinal</span>(11);      // '11th'<br>"
     + "<span class='codejs-function'>addOrdinal</span>(12);      // '12th'<br>"
+    return code;
+}
+
+function calculateFibonacciNumbers() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "fibo = <span class='codejs-function'>(n, memo = {})</span> => memo[n] || "
+    + "(n <= 2 ? 1 : (memo[n] = <span class='codejs-function'>fibo</span>(n - 1, memo) +"
+    + " <span class='codejs-function'>fibo</span>(n - 2, memo)));<br><br>// Examples<br>"
+    + "<span class='codejs-function'>fibo</span>(1);    // 1<br>"
+    + "<span class='codejs-function'>fibo</span>(2);    // 1<br>"
+    + "<span class='codejs-function'>fibo</span>(3);    // 2<br>"
+    + "<span class='codejs-function'>fibo</span>(4);    // 3<br>"
+    + "<span class='codejs-function'>fibo</span>(5);    // 5<br>"
     return code;
 }
