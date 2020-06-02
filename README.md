@@ -1,14 +1,5 @@
 # learnCode
 
-## javaScript
-### one line code ( 1Lc )
-![1lc](https://user-images.githubusercontent.com/31995155/83252687-8336dd80-a1cd-11ea-93aa-3dc825bc2d4c.png)
-
-- Code here
-  - [link](https://github.com/jinnatul/learnCode/tree/master/javaScript/1_LineCode)
-- Deployed Version (Feel free to visit)  
-  - [link](https://jinnatul.github.io/learnCode/javaScript/1_LineCode/index.html) 
-
 ## node-js
 ### Vegetable Farm
 
