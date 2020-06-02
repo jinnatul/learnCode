@@ -5,7 +5,7 @@ $(function() {
     // Check if a value is a function
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a value is a function</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_ValueIs_A_Function() +"</div></li>"
 
     // Check if a value is a generator function
     + "<li><div class='collapsible-header'>"
@@ -82,3 +82,17 @@ $(function() {
     $('#pro_function').html(problems);
 
 })
+
+function if_A_ValueIs_A_Function() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isFunction = v => ['<span class='codejs-defMethod'>[object Function]</span>', "
+    + "'<span class='codejs-defMethod'>[object GeneratorFunction]</span>', '<span "
+    + "class='codejs-defMethod'>[object AsyncFunction]</span>', '<span class='codejs-defMethod'>"
+    + "[object Promise]</span>'].includes(Object.prototype.toString.<span class='codejs-defMethod'>"
+    + "call</span>(v));<br><br>// Examples<br>"
+    + "isFunction(<span class='codejs-function'>function</span>() {});          // true<br>"
+    + "isFunction(<span class='codejs-function'>function</span>*() {});         // true<br>"
+    + "isFunction(<span class='codejs-keyword'>async</span> <span class='codejs-function'>"
+    + "function</span>() {});    // true<br>"
+    return code;
+}
