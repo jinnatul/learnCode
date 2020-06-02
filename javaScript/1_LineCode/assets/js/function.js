@@ -10,7 +10,7 @@ $(function() {
     // Check if a value is a generator function
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a value is a generator function</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_ValueIs_A_GeneratorFunction() +"</div></li>"
 
     // Check if a value is an async function
     + "<li><div class='collapsible-header'>"
@@ -88,11 +88,21 @@ function if_A_ValueIs_A_Function() {
     + "isFunction = v => ['<span class='codejs-defMethod'>[object Function]</span>', "
     + "'<span class='codejs-defMethod'>[object GeneratorFunction]</span>', '<span "
     + "class='codejs-defMethod'>[object AsyncFunction]</span>', '<span class='codejs-defMethod'>"
-    + "[object Promise]</span>'].includes(Object.prototype.toString.<span class='codejs-defMethod'>"
-    + "call</span>(v));<br><br>// Examples<br>"
+    + "[object Promise]</span>'].includes(<span class='codejs-keyword'>Object</span>.prototype.toString."
+    + "<span class='codejs-defMethod'>call</span>(v));<br><br>// Examples<br>"
     + "isFunction(<span class='codejs-function'>function</span>() {});          // true<br>"
     + "isFunction(<span class='codejs-function'>function</span>*() {});         // true<br>"
     + "isFunction(<span class='codejs-keyword'>async</span> <span class='codejs-function'>"
     + "function</span>() {});    // true<br>"
+    return code;
+}
+
+function if_A_ValueIs_A_GeneratorFunction() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isGeneratorFunction = v => <span class='codejs-keyword'>Object</span>.prototype.toString."
+    + "<span class='codejs-defMethod'>call</span>(v) === '<span class='codejs-defMethod'>"
+    + "[object GeneratorFunction]</span>';<br><br>// Examples<br>"
+    + "isGeneratorFunction(<span class='codejs-function'>function</span>() {});     // false"
+    + "isGeneratorFunction(<span class='codejs-function'>function</span>*() {});    // true"
     return code;
 }
