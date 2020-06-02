@@ -10,7 +10,7 @@ $(function() {
     // Check if a value is a regular expression
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if a value is a regular expression</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_ValueIs_A_RegularExpression() +"</div></li>"
 
     // Check if a value is nil
     + "<li><div class='collapsible-header'>"
@@ -126,5 +126,12 @@ function if_A_ValueIs_A_number() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "isNumber = value => !<span class='codejs-defMethod'>isNaN</span>(parseFloat(value)) "
     + "&& <span class='codejs-defMethod'>isFinite</span>(value);"
+    return code;
+}
+
+function if_A_ValueIs_A_RegularExpression() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isRegExp = value => <span class='codejs-keyword'>Object</span>.prototype.toString."
+    + "<span class='codejs-defMethod'>call</span>(value) === '<span class='codejs-defMethod'>[object RegExp]</span>';"
     return code;
 }
