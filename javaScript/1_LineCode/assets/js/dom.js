@@ -10,7 +10,7 @@ $(function() {
     // Check if an element is focused
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an element is focused</h6></div>"
-    + "<div class='collapsible-body codejs'></div>"
+    + "<div class='collapsible-body codejs'>"+ ifAnElemenTIsFocused() +"</div>"
 
     // Check if the touch events are supported
     + "<li><div class='collapsible-header'>"
@@ -110,6 +110,14 @@ $(function() {
 
 function ifAnElementIsADescendantOfAnother() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
-    + "isDescendant = <span class='codejs-function'>(child, parent)</span> => parent.<span class='codejs-defMethod'>contains</span>(child);"
+    + "isDescendant = <span class='codejs-function'>(child, parent)</span> => "
+    + "parent.<span class='codejs-defMethod'>contains</span>(child);"
+    return code;
+}
+
+function ifAnElemenTIsFocused() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "hasFocus = ele => (ele === <code class='javascript'><span class='codejs-keyword'>document</span>."
+    + "<span class='codejs-defMethod'>activeElement)</span>;"
     return code;
 }
