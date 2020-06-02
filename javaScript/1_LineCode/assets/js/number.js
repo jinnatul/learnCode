@@ -5,7 +5,7 @@ $(function() {
     // Add an ordinal suffix to a number
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Add an ordinal suffix to a number</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ anOrdinalSuffixTo_A_Number() +"</div></li>"
 
     // Calculate fibonacci numbers
     + "<li><div class='collapsible-header'>"
@@ -142,3 +142,22 @@ $(function() {
     $('#pro_number').html(problems);
 
 })
+
+function anOrdinalSuffixTo_A_Number() {
+    let code = "// `n` is a position number<br><code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "addOrdinal = n => `<span class='codejs-other'>${n}${['st', 'nd', 'rd'][((n + 90) % 100 - 10) % 10 - 1] ||"
+    + "'th'}</span>`;<br><br>// Or<br><span class='codejs-keyword'>let </span>"
+    + "addOrdinal = n => `<span class='codejs-other'>${n}${[, 'st', 'nd', 'rd'][/1?.$/.exec(n)] || 'th'}</span>`;"
+    + "<br><br>// Or<br><span class='codejs-keyword'>let </span>"
+    + "addOrdinal = n => `<span class='codejs-other'>${n}${[, 'st', 'nd', 'rd'][n % 100 >> 3^1 && n % 10] || "
+    + "'th'}</span>`;<br><br>// Or<br><span class='codejs-keyword'>let </span>"
+    + "addOrdinal = n => `<span class='codejs-other'>${n}${{one: 'st', two: 'nd', few: 'rd', other: 'th'}[new Intl.PluralRules('en', "
+    + "{ type: 'ordinal' }).select(n)]}</span>`;<br><br>// Examples<br>"
+    + "<span class='codejs-function'>addOrdinal</span>(1);      // '1st'<br>"
+    + "<span class='codejs-function'>addOrdinal</span>(2);      // '2nd'<br>"
+    + "<span class='codejs-function'>addOrdinal</span>(3);      // '3rd'<br>"
+    + "<span class='codejs-function'>addOrdinal</span>(10);      // '10th'<br>"
+    + "<span class='codejs-function'>addOrdinal</span>(11);      // '11th'<br>"
+    + "<span class='codejs-function'>addOrdinal</span>(12);      // '12th'<br>"
+    return code;
+}
