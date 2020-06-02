@@ -10,7 +10,7 @@ $(function() {
     // Check if a date is between two dates
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a date is between two dates</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_dateBetweenTwoDates() +"</div></li>"
 
     // Check if a date is today
     + "<li><div class='collapsible-header'>"
@@ -107,4 +107,14 @@ function numberOfDifferenceDaysBetweenTwoDates() {
     + "diffDays(<span class='codejs-keyword'>new </span><span class='codejs-defMethod'>Date</span>('2014-12-19'),"
     + "<span class='codejs-keyword'>new </span><span class='codejs-defMethod'>Date</span>('2020-01-01'));   // 1839"
     return code
+}
+
+function if_A_dateBetweenTwoDates() {
+    let code = "// `min`, `max` and `date` are `Date` instances<br><br>"
+    + "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isBetween = <span class='codejs-function'>(date, min, max)</span> => "
+    + "(date.<span class='codejs-defMethod'>getTime()</span> >= min.<span class='codejs-defMethod'>"
+    + "getTime()</span> && date.<span class='codejs-defMethod'>getTime()</span> "
+    + "<= max.<span class='codejs-defMethod'>getTime()</span>);"
+    return code;
 }
