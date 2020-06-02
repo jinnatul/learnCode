@@ -5,7 +5,7 @@ $(function() {
     // Calculate the number of difference days between two dates
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Calculate the number of difference days between two dates</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ numberOfDifferenceDaysBetweenTwoDates() +"</div></li>"
 
     // Check if a date is between two dates
     + "<li><div class='collapsible-header'>"
@@ -97,3 +97,14 @@ $(function() {
     $('#pro_dateTime').html(problems);
 
 })
+
+function numberOfDifferenceDaysBetweenTwoDates() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "diffDays = <span class='codejs-function'>(date, otherDate)</span> => "
+    + "<span class='codejs-defMethod'>Math</span>.ceil(<span class='codejs-defMethod'>"
+    + "Math</span>.abs(date - otherDate) / (1000 * 60 * 60 * 24));<br><br>"
+    + "// Example<br>"
+    + "diffDays(<span class='codejs-keyword'>new </span><span class='codejs-defMethod'>Date</span>('2014-12-19'),"
+    + "<span class='codejs-keyword'>new </span><span class='codejs-defMethod'>Date</span>('2020-01-01'));   // 1839"
+    return code
+}
