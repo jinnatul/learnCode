@@ -5,7 +5,7 @@ $(function() {
     // Check if an element is a descendant of another
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if an element is a descendant of another</h6></div>"
-    + "<div class='collapsible-body codejs'></div>"
+    + "<div class='collapsible-body codejs'>"+ ifAnElementIsADescendantOfAnother() +"</div>"
 
     // Check if an element is focused
     + "<li><div class='collapsible-header'>"
@@ -107,3 +107,9 @@ $(function() {
     $('#pro_dom').html(problems);
 
 })
+
+function ifAnElementIsADescendantOfAnother() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isDescendant = <span class='codejs-function'>(child, parent)</span> => parent.<span class='codejs-defMethod'>contains</span>(child);"
+    return code;
+}
