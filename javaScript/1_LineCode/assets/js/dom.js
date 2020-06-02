@@ -15,7 +15,7 @@ $(function() {
     // Check if the touch events are supported
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if the touch events are supported</h6></div>"
-    + "<div class='collapsible-body codejs'></div>"
+    + "<div class='collapsible-body codejs'>"+ ifTheTouchEventsAreSupported() +"</div>"
 
     // Detect internet explorer browser
     + "<li><div class='collapsible-header'>"
@@ -119,5 +119,13 @@ function ifAnElemenTIsFocused() {
     let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
     + "hasFocus = ele => (ele === <code class='javascript'><span class='codejs-keyword'>document</span>."
     + "<span class='codejs-defMethod'>activeElement)</span>;"
+    return code;
+}
+
+function ifTheTouchEventsAreSupported() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "touchSupported = () => ('<span class='codejs-keyword'>ontouchstart</span>' in window || "
+    + "window.<span class='codejs-defMethod'>DocumentTouch</span> && <span class='codejs-keyword'>"
+    + "document</span> instanceof window.<span class='codejs-defMethod'>DocumentTouch</span>);"
     return code;
 }
