@@ -5,7 +5,7 @@ $(function() {
     // Capitalize a string
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Capitalize a string</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ capitalize_A_String() +"</div></li>"
 
     // Check if a path is relative
     + "<li><div class='collapsible-header'>"
@@ -192,3 +192,11 @@ $(function() {
     $('#pro_string').html(problems);
 
 })
+
+function capitalize_A_String() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "capitalize = str => `<span class='codejs-other'>${str.charAt(0).toUpperCase()}"
+    + "${str.slice(1)}</span>`;<br><br>// Example<br>"
+    + "<span class='codejs-function'>capitalize</span>('hello world');      // 'Hello world'"
+    return code;
+}
