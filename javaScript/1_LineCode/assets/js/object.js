@@ -10,7 +10,7 @@ $(function() {
     // Check if a value is an object
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if a value is an object</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_ValueIsAnObject() +"</div></li>"
 
     // Check if an object is empty
     + "<li><div class='collapsible-header'>"
@@ -76,5 +76,16 @@ function if_A_ValueIs_A_PlainObject() {
     + "<span class='codejs-function'>isPlainObject</span>(function() {});           // false<br>"
     + "<span class='codejs-function'>isPlainObject</span>({});                      // true<br>"
     + "<span class='codejs-function'>isPlainObject</span>({ a: '1', b: '2' });      // true<br>"
+    return code;
+}
+
+function if_A_ValueIsAnObject() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isObject = v => (v !== <span class='codejs-other'>null</span> && typeof v === "
+    + "'<span class='codejs-keyword'>object</span>');<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isObject</span>(null);             // false<br>"
+    + "<span class='codejs-function'>isObject</span>('hello world');    // false<br>"
+    + "<span class='codejs-function'>isObject</span>({});               // true>br>"
+    + "<span class='codejs-function'>isObject</span>([]);               // true <br>"
     return code;
 }
