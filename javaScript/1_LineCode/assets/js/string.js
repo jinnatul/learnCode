@@ -10,7 +10,7 @@ $(function() {
     // Check if a path is relative
     + "<li><div class='collapsible-header'>"
     + "<h6>--> Check if a path is relative</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_PathIsRelative() +"</div></li>"
 
     // Check if a string contains lower case characters
     + "<li><div class='collapsible-header'>"
@@ -198,5 +198,16 @@ function capitalize_A_String() {
     + "capitalize = str => `<span class='codejs-other'>${str.charAt(0).toUpperCase()}"
     + "${str.slice(1)}</span>`;<br><br>// Example<br>"
     + "<span class='codejs-function'>capitalize</span>('hello world');      // 'Hello world'"
+    return code;
+}
+
+function if_A_PathIsRelative() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isRelative = path => <span class='codejs-other'>!/^([a-z]+:)?[\\/]/i.test(path);</span>"
+    + "<br><br>// Examples<br>"
+    + "<span class='codejs-function'>isRelative</span>('/foo/bar/baz');         // false<br>"
+    + "<span class='codejs-function'>isRelative</span>('C:\\foo\\bar\\baz');    // false<br>"
+    + "<span class='codejs-function'>isRelative</span>('foo/bar/baz.txt');      // true<br>"
+    + "<span class='codejs-function'>isRelative</span>('foo.md');               // true<br>"
     return code;
 }
