@@ -5,7 +5,7 @@ $(function() {
     // Check if a value is a number
     + "<li><div class='collapsible-header'>"
     + "<h6>$ Check if a value is a number</h6></div>"
-    + "<div class='collapsible-body codejs'></div></li>"
+    + "<div class='collapsible-body codejs'>"+ if_A_ValueIs_A_number() +"</div></li>"
 
     // Check if a value is a regular expression
     + "<li><div class='collapsible-header'>"
@@ -122,3 +122,9 @@ $(function() {
     $('#pro_misc').html(problems);
 
 })
+function if_A_ValueIs_A_number() {
+    let code = "<code class='javascript'><span class='codejs-keyword'>let </span>"
+    + "isNumber = value => !<span class='codejs-defMethod'>isNaN</span>(parseFloat(value)) "
+    + "&& <span class='codejs-defMethod'>isFinite</span>(value);"
+    return code;
+}
