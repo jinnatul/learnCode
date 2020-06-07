@@ -20,6 +20,14 @@
     outline: none;
 }
 
+#dice-1 {
+    top: 120px;
+}
+
+#dice-2 {
+    top: 250px;
+}
+
 * {
     margin: 0;
     padding: 0;

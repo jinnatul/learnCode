@@ -8,7 +8,7 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-let scores, roundScore, activePlayer, whoWinGame, lastDice;
+let scores, roundScore, activePlayer, whoWinGame, lastDice1, lastDice2;
 
 init();
 
@@ -16,29 +16,32 @@ init();
 document.querySelector('.btn-roll').addEventListener('click', function() {
   if (whoWinGame) {
     // Random Number generate
-    let dice = Math.floor(Math.random() * 6) + 1;
+    let dice1 = Math.floor(Math.random() * 6) + 1;
+    let dice2 = Math.floor(Math.random() * 6) + 1;
 
     // Display the result
-    let diceDOM = document.querySelector('.dice');
-    diceDOM.style.display = 'block';
-    diceDOM.src = 'resources/dice-' + dice + '.png';
+    document.getElementById('dice-1').style.display = 'block';
+    document.getElementById('dice-2').style.display = 'block';
+    document.getElementById('dice-1').src = 'resources/dice-' + dice1 + '.png';
+    document.getElementById('dice-2').src = 'resources/dice-' + dice2 + '.png';
 
     // Updating the round Scores if dice number was not equal 1
-    if (dice === 6 && lastDice === 6) {
+    if ((dice1 === 6 && lastDice1 === 6) || (dice2 === 6 && lastDice2 === 6)) {
       scores[activePlayer] = 0;
       document.querySelector('#score-' + activePlayer).textContent = '0';
       nextPlayer();
     }
-    else if (dice !== 1) {
+    else if (dice1 !== 1 && dice2 !== 1) {
       // Add scoures
-      roundScore += dice;
+      roundScore += (dice1 + dice2);
       document.querySelector('#current-' + activePlayer).textContent = roundScore;
     }
     else {
       // next player
       nextPlayer();
     }
-    lastDice = dice;
+    lastDice1 = dice1;
+    lastDice2 = dice2;
   }
 })
 
@@ -58,7 +61,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     // Check if player win the game
     if (scores[activePlayer] >= finalScour) {
       document.querySelector('#name-' + activePlayer).textContent = 'Winner :)';
-      document.querySelector('.dice').style.display = 'none';
+      document.getElementById('dice-1').style.display = 'none';
+      document.getElementById('dice-2').style.display = 'none';
       document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
       document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
       whoWinGame = false;
@@ -82,7 +86,8 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 
-    document.querySelector('.dice').style.display = 'none';
+    document.getElementById('dice-1').style.display = 'none';
+    document.getElementById('dice-2').style.display = 'none';
 }
 
 // Initial data for Game
@@ -91,8 +96,11 @@ function init() {
   roundScore = 0;
   activePlayer = 0;
   whoWinGame = true;
+  lastDice1 = 0;
+  lastDice2 = 0;
 
-  document.querySelector('.dice').style.display = 'none';
+  document.getElementById('dice-1').style.display = 'none';
+  document.getElementById('dice-2').style.display = 'none';
 
   document.getElementById('score-0').textContent = '0';
   document.getElementById('score-1').textContent = '0';
