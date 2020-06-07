@@ -11,7 +11,21 @@ GAME RULES:
 let scores = [0, 0];
 let roundScore = 0;
 let activePlayer = 1;
-let dice = Math.floor(Math.random() * 6) + 1;
 
-document.querySelector('#current-' + activePlayer).textContent = dice;
 document.querySelector('.dice').style.display = 'none';
+
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
+document.querySelector('.btn-roll').addEventListener('click', function() {
+  // Random Number generate
+  let dice = Math.floor(Math.random() * 6) + 1;
+
+  // Display the result
+  let diceDOM = document.querySelector('.dice');
+  diceDOM.style.display = 'block';
+  diceDOM.src = 'resources/dice-' + dice + '.png';
+  console.log(dice)
+})

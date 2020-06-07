@@ -16,7 +16,7 @@
 }
 
 body {
-    background-image: url(resources/background.JPG);
+    background-image: url(background.JPG);
     background-size: cover;
     background-position: center;
     font-family: Lato;
