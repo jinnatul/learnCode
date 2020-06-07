@@ -1,8 +1,7 @@
 Start MongoDB: sudo service mongod start
-Stop MongoDB: sudo service mongod stop
-Restart MongoDB: sudo service mongod restart
+Stop MongoDB: sudo service mongod stop / sudo systemctl stop mongod
+Restart MongoDB: sudo service mongod restart / sudo systemctl restart mongod
 Begin using MongoDB: mongo
-
 
 
 db create: db (name)  Ex: db customer
