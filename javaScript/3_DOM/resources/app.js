@@ -10,7 +10,7 @@ GAME RULES:
 */
 let scores = [0, 0];
 let roundScore = 0;
-let activePlayer = 1;
+let activePlayer = 0;
 
 document.querySelector('.dice').style.display = 'none';
 
@@ -27,5 +27,26 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
   let diceDOM = document.querySelector('.dice');
   diceDOM.style.display = 'block';
   diceDOM.src = 'resources/dice-' + dice + '.png';
-  console.log(dice)
+
+  // Updating the round Scores if dice number was not equal 1
+  if (dice !== 1) {
+    // Add scoures
+    roundScore += dice;
+    document.querySelector('#current-' + activePlayer).textContent = roundScore;
+  }
+  else {
+    // next player
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    roundScore = 0;
+
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+
+    document.querySelector('.dice').style.display = 'none';
+
+  }
+
 })
