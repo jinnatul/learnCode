@@ -51,8 +51,12 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     // Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
+    let finalScour = document.querySelector('.finalScoures').value;
+
+    if (!finalScour) finalScour = 100;
+
     // Check if player win the game
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= finalScour) {
       document.querySelector('#name-' + activePlayer).textContent = 'Winner :)';
       document.querySelector('.dice').style.display = 'none';
       document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
