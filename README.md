@@ -1,5 +1,15 @@
 # learnCode
 
+# Java-Script
+## Luck Game
+  - ![1](https://user-images.githubusercontent.com/31995155/83974703-14662c80-a911-11ea-8124-87b4a5a42df4.png)
+  - ![2](https://user-images.githubusercontent.com/31995155/83974557-fd730a80-a90f-11ea-9df7-c31f7c8f595c.png)
+
+- Code here
+  - [link](https://github.com/jinnatul/learnCode/tree/master/javaScript/3_DOM)
+- Deployed Version (Feel free to visit)  
+  - https://jinnatul.github.io/learnCode/javaScript/3_DOM/
+  
 ## node-js
 ### Vegetable Farm
 
