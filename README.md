@@ -5,6 +5,7 @@
 | **NodeJS-NotesForProfessionals** | [Read-me](/src/NodeJSNotesForProfessionals/README.md) | Mini-Projects |
 | **MongoDB-NotesForProfessionals** | [Read-me](/src/MongoDBNotesForProfessionals/README.md) | Mini-Projects |
 | **JavaScript-NotesForProfessionals** | [Read-me](/src/JavaScriptNotesForProfessionals/README.md) | Mini-Projects |
+| **TypeScript-NotesForProfessionals** | [Read-me](/src/TypeScriptNotesForProfessionals/README.md) | Mini-Projects |
 | **Python-NotesForProfessionals** | [Read-me](/src/PythonNotesForProfessionals/README.md) | Mini-Projects |
 | **JQuery-NotesForProfessionals** | [Read-me](/src/jQueryNotesForProfessionals/README.md) | Mini-Projects |
 | **HTML5-NotesForProfessionals** | [Read-me](/src/HTML5NotesForProfessionals/README.md) | Mini-Projects |
