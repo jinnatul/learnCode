@@ -1,4 +1,4 @@
-# MongoDBNotesForProfessionals
+# MongoDB-NotesForProfessionals
 
 | Chapter | Details |
 |:-------:|:-------:|

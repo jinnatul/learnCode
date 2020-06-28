@@ -1,4 +1,4 @@
-# NodeJSNotesForProfessionals
+# NodeJS-NotesForProfessionals
 
 | Chapter | Details |
 |:-------:|:-------:|
