@@ -3,3 +3,7 @@
   - `npm install -g node-inspector`
 - Then you can debug your application using
   - `node-debug app.js`
+
+  ```
+  hi
+  ```
