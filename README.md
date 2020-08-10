@@ -2,7 +2,7 @@
 
 | Topic | Details | Projects |
 |:-----:|:-------:|:--------:|
-| **NodeJS-NotesForProfessionals** | [Read-me](/src/NodeJSNotesForProfessionals/README.md) | Mini-Projects |
+| **NodeJS-NotesForProfessionals** | [Read-me](https://github.com/pro-js/nodeJS-Professionals/blob/master/README.md) | Mini-Projects |
 | **MongoDB-NotesForProfessionals** | [Read-me](/src/MongoDBNotesForProfessionals/README.md) | Mini-Projects |
 | **JavaScript-NotesForProfessionals** | [Read-me](/src/JavaScriptNotesForProfessionals/README.md) | Mini-Projects |
 | **TypeScript-NotesForProfessionals** | [Read-me](/src/TypeScriptNotesForProfessionals/README.md) | Mini-Projects |
